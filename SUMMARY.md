@@ -1,4 +1,4 @@
 # Table of contents
 
-* [Strict encoding overview](README.md)
+* [Strict encoding blueprint](README.md)
 
