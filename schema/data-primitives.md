@@ -26,7 +26,7 @@ Rational numbers:
 | R80       | 10    | IEEE X87 Extended | amplify\_apfloat::ieee::X87DoubleExtended |
 | R128      | 16    | IEEE Quad         | amplify\_apfloat::ieee::Quad              |
 | R256      | 32    | IEEE Oct          | amplify\_apfloat::ieee::Oct               |
-| R512      | 64    | Tappered Float    | TBD                                       |
+| R512      | 64    | Tapered Float     | TBD                                       |
 
 Fixed collections:
 
@@ -63,13 +63,13 @@ Monads
 
 Thus, types can be composed via following morphisms:
 
-| Name           | Syntax form | Comment                            |
-| -------------- | ----------- | ---------------------------------- |
-| Addition       | • , •       | Always restricted to 2^16 elements |
-| Multiplication | • \* CONST  | Always restricted to 2^16 elements |
-| Union          | • \| •      | Always restricted to 2^16 elements |
-| Vector         | \[•]        | Always restricted to 2^16 elements |
-| Set            | {•}         | Always restricted to 2^16 elements |
-| Map            | • -> •      | Always restricted to 2^16 elements |
+| Name            | Syntax form | Max no of elements for collections, subtypes otheriwse |
+| --------------- | ----------- | ------------------------------------------------------ |
+| Composition     | • , •       | 255                                                    |
+| Vector          | • \* CONST  | 2^16-1                                                 |
+| Union           | • \| •      | 255                                                    |
+| Dynamic array   | \[•]        | 2^16-1                                                 |
+| Dynamic set     | {•}         | 2^16-1                                                 |
+| Dynamic mapping | • -> •      | 2^16-1                                                 |
 
-Any structure is a tuple; enum is a union.
+Any structure is a composition; enum is a union.
