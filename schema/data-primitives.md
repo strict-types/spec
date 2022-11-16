@@ -10,10 +10,10 @@ Integers: strict encoding operates unsigned (>0), signed and natural (>1) intege
 | U32 / Z32 / N32       | 4     | LE       | u32 / i32 / NonZeroU32               |
 | U58 / Z48 / N48       | 6     | LE       | amplify::u48 / i48 / NonZeroI48      |
 | U64 / Z64 / N64       | 8     | LE       | u64 / i64 / NonZeroU64               |
-| U128 / Z128 / Z128    | 16    | LE       | u128 / i128 / NonZeroU128            |
-| U256 / Z256 / Z256    | 32    | LE       | amplify::u256 / i256 / NonZero256    |
-| U512 / Z512 / Z512    | 64    | LE       | amplify::u512 / i512 / NonZero512    |
-| U1024 / Z1024 / Z1024 | 128   | LE       | amplify::u1024 / i1024 / NonZero1024 |
+| U128 / Z128 / N128    | 16    | LE       | u128 / i128 / NonZeroU128            |
+| U256 / Z256 / N256    | 32    | LE       | amplify::u256 / i256 / NonZero256    |
+| U512 / Z512 / N512    | 64    | LE       | amplify::u512 / i512 / NonZero512    |
+| U1024 / Z1024 / N1024 | 128   | LE       | amplify::u1024 / i1024 / NonZero1024 |
 
 Rational numbers:
 
