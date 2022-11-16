@@ -39,18 +39,18 @@ Fixed collections:
 
 Variable collections
 
-| Sten type   | Length prefix    | Rust strict encoding type | Rust inner type                         |
-| ----------- | ---------------- | ------------------------- | --------------------------------------- |
-| Bytes       | u16; LE          | SmallVec\<u8>             | Confinement\<Vec\<u8>; u16::MAX>        |
-| Blob        | amplify::u24; LE | MediumVec\<u8>            | Confinement\<Vec\<u8>; u24::MAX>        |
-| String      | u16; LE          | SmallString               | Confinement\<String; u16::MAX>          |
-| Text        | amplify::u24; LE | MediumString              | Confinement\<String; u24::MAX>          |
-| AsciiString | u16; LE          |                           | Confinement\<AsciiChar; u16::MAX>       |
-| AsciiText   |                  |                           | Confinement\<AsciiChar; u24::MAX>       |
-| \[T]        | u16              | SmallVec\<T>              | Confinement\<Vec\<T>; u16::MAX>         |
-| {T}         | u16              | SmallSet\<T>              | Confinement\<BTreeSet\<T>; u16::MAX>    |
-| {K}->{T}    | u16              | SmallMap\<T>              | Confinement\<BTreeMap\<K, T>; u16::MAX> |
-| A, B        | n/a              | n/a                       | (A, B)                                  |
+| Sten type   | Length prefix and encoding | Rust strict encoding type alias | Rust inner type                         |
+| ----------- | -------------------------- | ------------------------------- | --------------------------------------- |
+| Bytes       | u16; LE                    | SmallVec\<u8>                   | Confinement\<Vec\<u8>; u16::MAX>        |
+| Blob        | amplify::u24; LE           | MediumVec\<u8>                  | Confinement\<Vec\<u8>; u24::MAX>        |
+| String      | u16; LE                    | SmallString                     | Confinement\<String; u16::MAX>          |
+| Text        | amplify::u24; LE           | MediumString                    | Confinement\<String; u24::MAX>          |
+| AsciiString | u16; LE                    |                                 | Confinement\<AsciiChar; u16::MAX>       |
+| AsciiText   | u24; LE                    |                                 | Confinement\<AsciiChar; u24::MAX>       |
+| \[T]        | u16; LE                    | SmallVec\<T>                    | Confinement\<Vec\<T>; u16::MAX>         |
+| {T}         | u16; LE                    | SmallSet\<T>                    | Confinement\<BTreeSet\<T>; u16::MAX>    |
+| {K}->{T}    | u16; LE                    | SmallMap\<T>                    | Confinement\<BTreeMap\<K, T>; u16::MAX> |
+| A, B        | n/a                        | n/a                             | (A, B)                                  |
 
 Monads
 
@@ -59,7 +59,7 @@ Monads
 | ()            | 0                        | Unit type          |
 | A \| B \| ... | max(len(A), len(B), ...) | Union or enum type |
 | T?            | len(T) + 1               | Optional: T \| ()  |
-| R \ E         |                          | Result: T \| E     |
+| R \ E         | max(len(R), len(E))      | Result: T \| E     |
 
 Thus, types can be composed via following morphisms:
 
