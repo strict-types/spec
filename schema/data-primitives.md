@@ -49,7 +49,7 @@ Variable collections
 | AsciiText   |                  |                           | Confinement\<AsciiChar; u24::MAX>       |
 | \[T]        | u16              | SmallVec\<T>              | Confinement\<Vec\<T>; u16::MAX>         |
 | {T}         | u16              | SmallSet\<T>              | Confinement\<BTreeSet\<T>; u16::MAX>    |
-| {K->T}      | u16              | SmallMap\<T>              | Confinement\<BTreeMap\<K, T>; u16::MAX> |
+| {K}->{T}    | u16              | SmallMap\<T>              | Confinement\<BTreeMap\<K, T>; u16::MAX> |
 | A, B        | n/a              | n/a                       | (A, B)                                  |
 
 Monads
@@ -70,6 +70,6 @@ Thus, types can be composed via following morphisms:
 | Union          | • \| •      | Always restricted to 2^16 elements |
 | Vector         | \[•]        | Always restricted to 2^16 elements |
 | Set            | {•}         | Always restricted to 2^16 elements |
-| Map            | {• -> •}    | Always restricted to 2^16 elements |
+| Map            | • -> •      | Always restricted to 2^16 elements |
 
 Any structure is a tuple; enum is a union.
