@@ -41,15 +41,15 @@ Variable collections
 
 | Sten type   | Length prefix    | Rust strict encoding type | Rust inner type                         |
 | ----------- | ---------------- | ------------------------- | --------------------------------------- |
-| Bytes       | u16; LE          | SmallVec\<u8>             | Confinement\<Vec\<u8>; Len::U16>        |
-| Blob        | amplify::u24; LE | MediumVec\<u8>            | Confinement\<Vec\<u8>; Len::U24>        |
-| String      | u16; LE          | SmallString               | Confinement\<String; Len::U16>          |
-| Text        | amplify::u24; LE | MediumString              | Confinement\<String; Len::U24>          |
-| AsciiString | u16; LE          |                           | Confinement\<AsciiChar; Len::U16>       |
-| AsciiText   |                  |                           | Confinement\<AsciiChar; Len::U24>       |
-| \[T]        | u16              | SmallVec\<T>              | Confinement\<Vec\<T>; Len::U16>         |
-| {T}         | u16              | SmallSet\<T>              | Confinement\<BTreeSet\<T>; Len::U16>    |
-| {K->T}      | u16              | SmallMap\<T>              | Confinement\<BTreeMap\<K, T>; Len::U16> |
+| Bytes       | u16; LE          | SmallVec\<u8>             | Confinement\<Vec\<u8>; u16::MAX>        |
+| Blob        | amplify::u24; LE | MediumVec\<u8>            | Confinement\<Vec\<u8>; u24::MAX>        |
+| String      | u16; LE          | SmallString               | Confinement\<String; u16::MAX>          |
+| Text        | amplify::u24; LE | MediumString              | Confinement\<String; u24::MAX>          |
+| AsciiString | u16; LE          |                           | Confinement\<AsciiChar; u16::MAX>       |
+| AsciiText   |                  |                           | Confinement\<AsciiChar; u24::MAX>       |
+| \[T]        | u16              | SmallVec\<T>              | Confinement\<Vec\<T>; u16::MAX>         |
+| {T}         | u16              | SmallSet\<T>              | Confinement\<BTreeSet\<T>; u16::MAX>    |
+| {K->T}      | u16              | SmallMap\<T>              | Confinement\<BTreeMap\<K, T>; u16::MAX> |
 | A, B        | n/a              | n/a                       | (A, B)                                  |
 
 Monads
