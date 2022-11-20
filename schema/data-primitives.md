@@ -8,7 +8,7 @@ Integers: strict encoding operates unsigned (>0), signed and natural (>1) intege
 | U16 / Z16 / N16       | 2     | LE       | u16 / i16 / NonZeroU16               |
 | U24 / Z24 / N24       | 3     | LE       | amplify::u24 / i14 / NonZeroU24      |
 | U32 / Z32 / N32       | 4     | LE       | u32 / i32 / NonZeroU32               |
-| U58 / Z48 / N48       | 6     | LE       | amplify::u48 / i48 / NonZeroI48      |
+| U48 / Z48 / N48       | 6     | LE       | amplify::u48 / i48 / NonZeroI48      |
 | U64 / Z64 / N64       | 8     | LE       | u64 / i64 / NonZeroU64               |
 | U128 / Z128 / N128    | 16    | LE       | u128 / i128 / NonZeroU128            |
 | U256 / Z256 / N256    | 32    | LE       | amplify::u256 / i256 / NonZero256    |
@@ -66,7 +66,7 @@ Thus, types can be composed via following morphisms:
 | Name            | Syntax form | Max no of elements for collections, subtypes otheriwse |
 | --------------- | ----------- | ------------------------------------------------------ |
 | Composition     | • , •       | 255                                                    |
-| Vector          | • \* CONST  | 2^16-1                                                 |
+| Vector          | • ^ CONST   | 2^16-1                                                 |
 | Union           | • \| •      | 255                                                    |
 | Dynamic array   | \[•]        | 2^16-1                                                 |
 | Dynamic set     | {•}         | 2^16-1                                                 |
