@@ -61,15 +61,27 @@ Monads
 | T?            | len(T) + 1               | Optional: T \| ()  |
 | R \ E         | max(len(R), len(E))      | Result: T \| E     |
 
-Thus, types can be composed via following morphisms:
+Thus, types can be composed via following fundamental morphisms:
 
-| Name            | Syntax form | Max no of elements for collections, subtypes otheriwse |
-| --------------- | ----------- | ------------------------------------------------------ |
-| Composition     | • , •       | 255                                                    |
-| Vector          | • ^ CONST   | 2^16-1                                                 |
-| Union           | • \| •      | 255                                                    |
-| Dynamic array   | \[•]        | 2^16-1                                                 |
-| Dynamic set     | {•}         | 2^16-1                                                 |
-| Dynamic mapping | • -> •      | 2^16-1                                                 |
+| Name                           | Syntax form                              | Max no of elements for collections, subtypes otheriwse |
+| ------------------------------ | ---------------------------------------- | ------------------------------------------------------ |
+| Unit type                      | ()                                       | 0                                                      |
+| Composition (structure, tuple) | <p>• , • <em>or</em><br>(• , •)</p>      | 255                                                    |
+| Union / enum                   | <p>• | • <em>or</em><br>(• | •)</p>      | 255                                                    |
+| Mapping (function)             | <p>• -> • <em>or</em><br>(•) -> (•) </p> | 2 (input & output)                                     |
+| Static array                   | \[•; N]                                  | N up to 2^16-1                                         |
+| Dynamic array                  | \[•]                                     | 2^16-1                                                 |
+| Dynamic set                    | {•}                                      | 2^16-1                                                 |
+| Dynamic map                    | {•} -> \[•]                              | 2^16-1                                                 |
+| Dynamic array of tuples        | \[•, •]                                  | 2^16-1 of tuple pairs                                  |
 
-Any structure is a composition; enum is a union.
+Any structure or a tuple is a composition; each enum is a union.
+
+A fundamental morphisms can be used to build more advanced types, like dynamic maps and dynamic arrays of tuples
+
+| Name                    | Syntax form                               | Max no of elements for collections, subtypes otheriwse |
+| ----------------------- | ----------------------------------------- | ------------------------------------------------------ |
+| Dynamic map             | <p>{•} -> [•] <em>or</em><br>{• -> •}</p> | 2^16-1                                                 |
+| Dynamic array of tuples | <p>[•, •] <em>or</em><br>[(•, •)]</p>     | 2^16-1 of tuple pairs                                  |
+
+\
