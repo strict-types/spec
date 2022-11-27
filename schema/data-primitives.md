@@ -72,8 +72,6 @@ Thus, types can be composed via following fundamental morphisms:
 | Static array                   | \[•; N]                                  | N up to 2^16-1                                         |
 | Dynamic array                  | \[•]                                     | 2^16-1                                                 |
 | Dynamic set                    | {•}                                      | 2^16-1                                                 |
-| Dynamic map                    | {•} -> \[•]                              | 2^16-1                                                 |
-| Dynamic array of tuples        | \[•, •]                                  | 2^16-1 of tuple pairs                                  |
 
 Any structure or a tuple is a composition; each enum is a union.
 
