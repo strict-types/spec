@@ -1,4 +1,4 @@
-# Type system
+# Data type algebra
 
 ## Fundamental types
 

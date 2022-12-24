@@ -8,7 +8,7 @@ These chapter introduces and explains three main concepts:
 
 Each data type in strict encoding is a **semantic** type, which has some **memory layout**.
 
-Two different types may have the same memory layout - but they are still different types. For instance, both date of month and age of a person can be represented by a single byte in memory - but semantically these are two different types, which instances can't be directly compared or ordered (27 aged person is neither can be classified to be "before" or "after" 27 day of any months).
+Two different types may have the same memory layout - but they are still different types. For instance, both date of month and age of a person can be represented by a single byte in memory - but semantically these are two different types, which instances can't be directly compared or ordered (27 aged person is neither can be classified to be "before" or "after" 27 day of any month).
 
 ## Type semantics and ids
 
