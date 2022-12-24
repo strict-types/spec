@@ -2,9 +2,10 @@
 
 * [Strict encoding](README.md)
 
-## Schema
+## Type system
 
-* [Type system](schema/data-primitives.md)
+* [Data type algebra](type-system/data-primitives.md)
+* [Type semantics and layout](type-system/type-semantics-and-layout.md)
 
 ## Tools
 
