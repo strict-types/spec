@@ -14,9 +14,9 @@ Strict encoding is a formal semantic and notation system for encoding algebraic 
 * formally verification: with algebraic data types and the strict encoding API it is possible to formally verify that the data serialization and deserialization is performed according to a schema, as well as prove statements about type semantic and memory layout equivalence and convertability;
 * extensibility: strict encoding typing may be extended with new types using provided notation system; this extensions include TLV extensions used for agile networking RPC contracts.
 
-Strict encoding is a functional and close to the bare metal at the same time, which puts it into a segment of serialization languagues which was not populated before:&#x20;
+Strict encoding is a functional and close to the bare metal at the same time, which puts it into a segment of serialization languages which was not populated before:&#x20;
 
-<figure><img src=".gitbook/assets/strict-encoding-box.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/strict-encoding-box-black (1).png" alt=""><figcaption><p>Strict encoding on landscape of other languages and encoding notations</p></figcaption></figure>
 
 Strict encoding was developed by Dr Maxim Orlovsky and is a part of a Swiss non-profit UBIDECO ("Association for Ubiquitous Deterministic Computing"), launched by LNP/BP Standards Association, CypherNet Association and Pandora Prime Inc. It had started in 2019 as a part of a client-side-validation paradigm development by LNP/BP Standards Association, targeting distributed computing systems and originating from Peter Todd ideas about proofmarshal systems. It was contributed to UBIDECO Project at the end of 2022. Strict encoding development was supportedby iFinex Inc (Bitfinex, Tether), Fulgur Ventures, Pandora Prime Inc, DIBA Inc through of LNP/BP Association funding, as well as personal Dr Maxim Orlovsky funds.
 
