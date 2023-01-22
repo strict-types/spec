@@ -1,12 +1,10 @@
 ---
-description: >-
-  Portable & deterministic notation and formal system for algebraic data type
-  serialization
+description: Portable & deterministic formalism for algebraic data type serialization
 ---
 
-# Strict encoding
+# Strict types
 
-Strict encoding is a formal semantic and notation system for encoding algebraic data types in a portable & deterministic way. Key strict encoding features include:
+Strict rtpes is a formal semantic and notation system for encoding algebraic data types in a portable & deterministic way. Key strict encoding features include:
 
 * portability, or platform-independence: it can be used with different computing architectures, instruction set architectures and in networking systems without modification;
 * determinism: any two strict encoded data which differ in their byte sequence will represent semantically-distinct information pieces;
@@ -14,7 +12,7 @@ Strict encoding is a formal semantic and notation system for encoding algebraic 
 * formally verification: with algebraic data types and the strict encoding API it is possible to formally verify that the data serialization and deserialization is performed according to a schema, as well as prove statements about type semantic and memory layout equivalence and convertability;
 * extensibility: strict encoding typing may be extended with new types using provided notation system; this extensions include TLV extensions used for agile networking RPC contracts.
 
-Strict encoding is a functional and close to the bare metal at the same time, which puts it into a segment of serialization languages which was not populated before:&#x20;
+Strict types is a functional and close to the bare metal at the same time, which puts it into a segment of serialization languages which was not populated before:&#x20;
 
 <figure><img src=".gitbook/assets/strict-encoding-box-black (1).png" alt=""><figcaption><p>Strict encoding on landscape of other languages and encoding notations</p></figcaption></figure>
 

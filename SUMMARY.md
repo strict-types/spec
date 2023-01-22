@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Strict encoding](README.md)
+* [Strict types](README.md)
 
 ## Type system
 
