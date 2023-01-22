@@ -8,7 +8,7 @@ _Strict types_ is a formal semantic and notation system for encoding algebraic d
 
 Why do we need another algebraic data types if we have one in Haskell, Idris etc? Well, we need it since existing systems focus on abstract goals and are quite far from the real existing computing platforms. **Strict types**, on the other hand, **apply algebraic data types to the existing computing platforms, networking and programming languages, without sacrificing formal analytical properties**. For instance, in strict types any collection must have a defined bounds for the minimum and maximum number of elements the collection may hold, which becomes a part of a type itself. This allows to precisely predict resource requirements at a compile time and avoid runtime exceptions, as well as apply formal analysis in a platform-specific manner.
 
-Key strict encoding features include:
+Key features of strict types include:
 
 * portability, or platform-independence: it can be used with different computing architectures, instruction set architectures and in networking systems without modification;
 * determinism: any two strict encoded data which differ in their byte sequence will represent semantically-distinct information pieces;
